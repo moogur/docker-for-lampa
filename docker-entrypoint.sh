@@ -44,7 +44,7 @@ if [ "$1" = "nginx" ] || [ "$1" = "nginx-debug" ]; then
     fi
 fi
 
-# replace prefix and domains
+# replace prefix and domain
 prefix=$PREFIX
 if [ -z $prefix ]; then
   prefix=https://
