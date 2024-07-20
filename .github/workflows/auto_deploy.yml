@@ -10,11 +10,10 @@ on:
 
 jobs:
   deploy:
+    uses: moogur/all-workflows/.github/workflows/auto_deploy_for_docker_container.yml@master
     environment: DEPLOY
-    steps:
-      - uses: moogur/all-workflows/.github/workflows/auto_deploy_for_docker_container.yml@master
-        secrets: inherit
-        with:
-          repository_url: "https://github.com/yumata/lampa.git"
-          repository_branch: "main"
-          last_update_commit_time: ${{ env.LAST_UPDATE_COMMIT_TIME }}
+    secrets: inherit
+    with:
+      repository_url: "https://github.com/yumata/lampa.git"
+      repository_branch: "main"
+      last_update_commit_time: ${{ env.LAST_UPDATE_COMMIT_TIME }}
