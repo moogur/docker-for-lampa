@@ -4,14 +4,13 @@ on:
   push:
     branches:
       - master
-env:
-  env_var: ${{ vars.DEPLOY }}
 
 jobs:
   deploy:
     uses: moogur/all-workflows/.github/workflows/auto_deploy_for_docker_container.yml@master
     secrets: inherit
+    environment: ${{ vars.DEPLOY }}
     with:
       repository_url: "https://github.com/yumata/lampa.git"
       repository_branch: "main"
-      last_update_commit_time: ${{ env_var.LAST_UPDATE_COMMIT_TIME }}
+      last_update_commit_time: ${{ LAST_UPDATE_COMMIT_TIME }}
