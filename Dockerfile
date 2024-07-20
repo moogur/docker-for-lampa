@@ -9,7 +9,7 @@ WORKDIR /app
 COPY docker-entrypoint.sh docker-entrypoint.sh
 
 RUN apk add --no-cache git && \
-    git clone https://github.com/yumata/lampa.git && \
+    git clone --depth=1 --single-branch -b main https://github.com/yumata/lampa.git && \
     cd lampa && \
     rm -fr .git && \
     rm -f .dockerignore Dockerfile README.md SECURITY.md
