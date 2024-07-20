@@ -7,6 +7,7 @@ on:
 
 jobs:
   deploy:
+    permissions: write-all
     uses: moogur/all-workflows/.github/workflows/auto_deploy_for_docker_container.yml@master
     secrets: inherit
     with:
