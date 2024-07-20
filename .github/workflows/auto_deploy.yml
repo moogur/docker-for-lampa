@@ -2,8 +2,7 @@ name: Auto deploy
 
 on:
   schedule:
-    # - cron: "0 1 * * 6"
-    - cron: "0 18 * * *"
+    - cron: "0 2 * * 6"
 
 jobs:
   auto_deploy:
