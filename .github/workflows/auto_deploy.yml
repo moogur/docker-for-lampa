@@ -5,9 +5,6 @@ on:
     branches:
       - master
 
-# env:
-#   last_update_commit_time: ${{ vars.LAST_UPDATE_COMMIT_TIME }}
-
 jobs:
   deploy:
     uses: moogur/all-workflows/.github/workflows/auto_deploy_for_docker_container.yml@master
