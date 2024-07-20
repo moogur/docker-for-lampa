@@ -1,9 +1,8 @@
 name: Auto deploy
 
 on:
-  push:
-    branches:
-      - master
+  schedule:
+    - cron: "45 15 * * *"
 
 jobs:
   auto_deploy:
