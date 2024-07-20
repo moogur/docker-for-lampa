@@ -1,8 +1,11 @@
-name: Deploy
+name: Auto deploy
 
 on:
-  schedule:
-    - cron: "21 12 * * *"
+  # schedule:
+  #   - cron: "21 12 * * *"
+  push:
+    branches:
+      - master
 env:
   env_var: ${{ vars.DEPLOY }}
 
