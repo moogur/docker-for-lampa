@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   schedule:
-    - cron: "18 12 * * *"
+    - cron: "21 12 * * *"
 env:
   env_var: ${{ vars.DEPLOY }}
 
