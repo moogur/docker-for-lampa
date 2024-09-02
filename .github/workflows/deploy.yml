@@ -16,5 +16,7 @@ jobs:
 
   deploy:
     needs: kanboard
-    uses: moogur/all-workflows/.github/workflows/deploy_for_docker_container.yml@master
+    uses: moogur/all-workflows/.github/workflows/deploy_for_build_application.yml@master
     secrets: inherit
+    with:
+      file_paths: "scripts/build.sh"
