@@ -3,3 +3,4 @@ cd lampa && \
 rm -fr .git && \
 rm -f .dockerignore Dockerfile README.md SECURITY.md LICENSE
 zip -9 -r application ./*
+mv application ../application.zip
